@@ -52,8 +52,8 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-black/40" />
           <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
-            <div className="inline-block border-b border-t border-secondary/50 px-6 py-2">
-              <span className="text-sm uppercase tracking-widest text-secondary">Exclusive Listing</span>
+            <div className="inline-block px-6 py-2">
+              <span className="text-sm uppercase tracking-widest text-white">Exclusive Listing</span>
             </div>
             <h1 className="mt-6 font-serif text-5xl font-light tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
               Grayross Estates
@@ -68,7 +68,7 @@ export default function Home() {
               <Button
                 size="lg"
                 variant="outline"
-                className="gap-2 border-secondary/50 bg-white/10 text-secondary backdrop-blur-sm hover:bg-white/20"
+                className="gap-2 border-white/50 bg-white/10 text-white backdrop-blur-sm hover:bg-white/20"
               >
                 Request Information <ChevronRight className="h-4 w-4" />
               </Button>
