@@ -62,11 +62,10 @@ export default function LocationMap() {
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
             <div className="absolute bottom-0 left-0 p-6 text-white">
               <div className="inline-block bg-black/50 px-4 py-2 rounded-md backdrop-blur-sm">
                 <h3 className="font-serif text-2xl font-light">Prestigious Neighborhood</h3>
-                <p className="mt-2 text-white/80">
+                <p className="mt-2 text-white">
                   Exclusive waterfront properties with the Vancouver skyline in the background
                 </p>
               </div>
@@ -80,11 +79,10 @@ export default function LocationMap() {
               fill
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
             <div className="absolute bottom-0 left-0 p-6 text-white">
               <div className="inline-block bg-black/50 px-4 py-2 rounded-md backdrop-blur-sm">
                 <h3 className="font-serif text-2xl font-light">Minutes from Downtown</h3>
-                <p className="mt-2 text-white/80">
+                <p className="mt-2 text-white">
                   Just 15 minutes from downtown Vancouver's world-class amenities and attractions
                 </p>
               </div>
