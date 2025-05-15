@@ -58,7 +58,7 @@ export default function Home() {
             <h1 className="mt-6 font-serif text-5xl font-light tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
               Grayross Estates
             </h1>
-            <p className="mt-4 max-w-3xl text-xl font-light">
+            <p className="mt-4 max-w-3xl text-xl font-light bg-primary/40 px-6 py-3 rounded-lg backdrop-blur-[2px]">
               7520 Balaclava Street, Vancouver BC - A rare waterfront estate with over 990 feet of private Fraser River frontage
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
