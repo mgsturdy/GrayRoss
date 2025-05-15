@@ -25,7 +25,7 @@ export default function AerialViews() {
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute bottom-0 left-0 p-6 text-white">
-              <div className="inline-block bg-black/50 px-4 py-2 rounded-md backdrop-blur-sm">
+              <div className="inline-block px-4 py-2">
                 <h3 className="font-serif text-2xl font-light">Waterfront Access</h3>
                 <p className="mt-2 text-white">Direct water access with existing docks and marine infrastructure</p>
               </div>
@@ -40,7 +40,7 @@ export default function AerialViews() {
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute bottom-0 left-0 p-6 text-white">
-              <div className="inline-block bg-black/50 px-4 py-2 rounded-md backdrop-blur-sm">
+              <div className="inline-block px-4 py-2">
                 <h3 className="font-serif text-2xl font-light">Expansive Grounds</h3>
                 <p className="mt-2 text-white">
                   7.99 acres of prime real estate with existing structures and infrastructure
@@ -57,7 +57,7 @@ export default function AerialViews() {
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute bottom-0 left-0 p-6 text-white">
-              <div className="inline-block bg-black/50 px-4 py-2 rounded-md backdrop-blur-sm">
+              <div className="inline-block px-4 py-2">
                 <h3 className="font-serif text-3xl font-light">Stunning Location</h3>
                 <p className="mt-2 max-w-2xl text-white">
                   Located in Vancouver's prestigious Southlands neighborhood, just 15 minutes from downtown with
