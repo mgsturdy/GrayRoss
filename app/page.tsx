@@ -53,12 +53,14 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/40" />
           <div className="container relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
             <div className="inline-block border-t border-b border-white/50 px-6 py-2">
-              <span className="text-sm uppercase tracking-widest text-white">Exclusive Listing</span>
+              <div className="border-t border-b border-white/50 px-6 py-2">
+                <span className="text-sm uppercase tracking-widest text-white">Exclusive Listing</span>
+              </div>
             </div>
             <h1 className="mt-6 font-serif text-5xl font-light tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
               Grayross Estates
             </h1>
-            <p className="mt-4 max-w-3xl text-xl font-light bg-primary/40 px-6 py-3 rounded-lg backdrop-blur-[2px]">
+            <p className="mt-4 max-w-3xl text-xl font-light">
               7520 Balaclava Street, Vancouver BC - A rare waterfront estate with over 990 feet of private Fraser River frontage
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -84,7 +86,7 @@ export default function Home() {
                 <span className="text-sm uppercase tracking-widest text-primary">Investment Opportunity</span>
               </div>
               <h2 className="mt-6 font-serif text-4xl font-light tracking-tight sm:text-5xl md:text-6xl">
-                $30,000,000
+                $29,500,000
               </h2>
               <p className="mt-6 text-xl font-light text-muted-foreground">
                 A rare chance to acquire prime real estate on the water in Vancouver
