@@ -1,8 +1,34 @@
 import Image from "next/image"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { useState } from "react"
+
+const groundImages = [
+  {
+    src: "/images/property-satellite.png",
+    alt: "Satellite view of the property grounds",
+  },
+  {
+    src: "/images/aerial-1.jpg", 
+    alt: "Aerial view of the waterfront property",
+  },
+  {
+    src: "/images/aerial-2.jpg",
+    alt: "Property map showing the expansive grounds",
+  }
+]
 
 export default function AerialViews() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % groundImages.length)
+  }
+
+  const prevImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + groundImages.length) % groundImages.length)
+  }
+
   return (
     <div className="bg-muted py-16">
       <div className="container">
@@ -33,9 +59,27 @@ export default function AerialViews() {
           </div>
 
           <div className="group relative aspect-[4/3] overflow-hidden rounded-lg">
+            <div className="absolute inset-0 z-10 flex items-center">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="absolute left-2 z-20 h-8 w-8 rounded-full bg-primary/70 text-white backdrop-blur-sm"
+                onClick={prevImage}
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </Button>
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="absolute right-2 z-20 h-8 w-8 rounded-full bg-primary/70 text-white backdrop-blur-sm"
+                onClick={nextImage}
+              >
+                <ChevronRight className="h-4 w-4" />
+              </Button>
+            </div>
             <Image
-              src="/images/property-satellite.png"
-              alt="Satellite view of the property grounds"
+              src={groundImages[currentImageIndex].src}
+              alt={groundImages[currentImageIndex].alt}
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
