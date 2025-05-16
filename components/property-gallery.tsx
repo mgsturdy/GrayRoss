@@ -3,14 +3,12 @@
 import { useState } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
-
 import { Button } from "@/components/ui/button"
 
-// Update the images array with the actual property images
 const images = [
   {
     src: "/images/waterfront-neighborhood.png",
-    alt: "Waterfront neighborhood with Vancouver skyline in the background",
+    alt: "Waterfront neighborhood with expansive water views",
   },
   {
     src: "/images/waterfront-aerial.png",
@@ -18,19 +16,19 @@ const images = [
   },
   {
     src: "/images/a-frame-structure.png",
-    alt: "Distinctive A-frame structure on the property",
+    alt: "Distinctive structure with potential for indoor riding arena",
   },
   {
     src: "/images/stable-interior-hd.png",
-    alt: "Interior view of the elegant horse stables with string lighting",
+    alt: "Interior view showing development potential",
   },
   {
     src: "/images/equestrian-facility.png",
-    alt: "Equestrian facility with horses and riders",
+    alt: "Equestrian facility potential",
   },
   {
     src: "/images/vancouver-skyline.png",
-    alt: "Vancouver skyline at sunset",
+    alt: "Expansive water views and beyond",
   },
 ]
 
