@@ -1,120 +1,58 @@
-import Image from "next/image"
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { useState } from "react"
+'use client'
 
-const groundImages = [
-  {
-    src: "/images/property-satellite.png",
-    alt: "Satellite view of the property grounds",
-  },
-  {
-    src: "/images/aerial-1.jpg", 
-    alt: "Aerial view of the waterfront property",
-  },
-  {
-    src: "/images/aerial-2.jpg",
-    alt: "Property map showing the expansive grounds",
-  }
-]
+import Image from "next/image"
 
 export default function AerialViews() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
-
-  const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % groundImages.length)
-  }
-
-  const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + groundImages.length) % groundImages.length)
-  }
-
   return (
-    <div className="bg-muted py-16">
+    <section className="py-24 bg-muted">
       <div className="container">
         <div className="mx-auto max-w-5xl text-center">
           <div className="inline-block border-b border-t border-primary/30 px-6 py-2">
-            <span className="text-sm uppercase tracking-widest text-primary">Property Overview</span>
+            <span className="text-sm uppercase tracking-widest text-primary">Aerial Perspectives</span>
           </div>
-          <h2 className="mt-6 font-serif text-4xl font-light tracking-tight">Aerial Perspectives</h2>
+          <h2 className="mt-6 font-serif text-4xl font-light tracking-tight sm:text-5xl">
+            Breathtaking Views
+          </h2>
           <p className="mt-4 text-xl text-muted-foreground">
-            Experience the full scope and potential of this remarkable 7.99-acre property
+            Experience the grandeur of this exceptional waterfront estate from above
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
-          <div className="group relative aspect-[4/3] overflow-hidden rounded-lg">
+        <div className="mt-16 grid gap-8 md:grid-cols-2">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
             <Image
-              src="/images/waterfront-aerial.png"
-              alt="Aerial view of the waterfront property"
+              src="/images/aerial-view-1.png"
+              alt="Aerial view of the estate"
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-cover transition-transform hover:scale-105"
             />
-            <div className="absolute bottom-0 left-0 p-6 text-white">
-              <div className="inline-block bg-primary/40 px-4 py-2 rounded-md backdrop-blur-[2px]">
-                <h3 className="font-serif text-2xl font-light">Waterfront Access</h3>
-                <p className="mt-2 text-white">Direct water access with existing docks and marine infrastructure</p>
-              </div>
-            </div>
           </div>
-
-          <div className="group relative aspect-[4/3] overflow-hidden rounded-lg">
-            <div className="absolute inset-0 z-10 flex items-center">
-              <Button 
-                variant="ghost" 
-                size="icon" 
-                className="absolute left-2 z-20 h-8 w-8 rounded-full bg-primary/70 text-white backdrop-blur-sm"
-                onClick={prevImage}
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </Button>
-              <Button 
-                variant="ghost" 
-                size="icon" 
-                className="absolute right-2 z-20 h-8 w-8 rounded-full bg-primary/70 text-white backdrop-blur-sm"
-                onClick={nextImage}
-              >
-                <ChevronRight className="h-4 w-4" />
-              </Button>
-            </div>
+          <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
             <Image
-              src={groundImages[currentImageIndex].src}
-              alt={groundImages[currentImageIndex].alt}
+              src="/images/aerial-view-2.png"
+              alt="Aerial view of the waterfront"
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-cover transition-transform hover:scale-105"
             />
-            <div className="absolute bottom-0 left-0 p-6 text-white">
-              <div className="inline-block bg-primary/40 px-4 py-2 rounded-md backdrop-blur-[2px]">
-                <h3 className="font-serif text-2xl font-light">Expansive Grounds</h3>
-                <p className="mt-2 text-white">
-                  7.99 acres of prime real estate with existing structures and infrastructure
-                </p>
-              </div>
-            </div>
           </div>
-
-          <div className="group relative aspect-[4/3] overflow-hidden rounded-lg md:col-span-2">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
             <Image
-              src="/images/a-frame-structure.png"
-              alt="Aerial view of the property with mountain backdrop"
+              src="/images/aerial-view-3.png"
+              alt="Aerial view of the property grounds"
               fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
+              className="object-cover transition-transform hover:scale-105"
             />
-            <div className="absolute bottom-0 left-0 p-6 text-white">
-              <div className="inline-block bg-primary/40 px-4 py-2 rounded-md backdrop-blur-[2px]">
-                <h3 className="font-serif text-3xl font-light">Stunning Location</h3>
-                <p className="mt-2 max-w-2xl text-white">
-                  Located in Vancouver's prestigious Southlands neighborhood, just 15 minutes from downtown with
-                  breathtaking mountain views
-                </p>
-                <Button className="mt-4 bg-primary text-white border border-white/30 hover:bg-primary/80">
-                  Request Detailed Survey <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </div>
-            </div>
+          </div>
+          <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+            <Image
+              src="/images/aerial-view-4.png"
+              alt="Aerial view of the surrounding area"
+              fill
+              className="object-cover transition-transform hover:scale-105"
+            />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
